@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'side' : 'push'"
+    [opened]="(isHandset$ | async) === true"
+  >
+    <!-- <mat-toolbar>Menu</mat-toolbar> -->
+    <mat-toolbar color="indigo">
+      <span> Menu</span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#"> Overview</a>
+      <a mat-list-item href="#">Tradebook</a>
+      <a mat-list-item href="#">Stock Obligation</a>
+      <a mat-list-item href="#">Fund Obligation</a>
+      <a mat-list-item href="#">Cost Settlement Report</a>
+      <!-- <a mat-list-item href="#">Corporate Actions Report</a> -->
+      <a mat-list-item href="#">Logout</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        class="primary"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Clearing House</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
