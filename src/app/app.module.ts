@@ -12,11 +12,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { OverviewtableComponent } from './overviewtable/overviewtable.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    OverviewtableComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTableModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
