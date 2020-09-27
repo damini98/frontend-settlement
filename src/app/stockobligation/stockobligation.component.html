@@ -1,0 +1,30 @@
+<p text-align='center'>STOCK OBLIGATION REPORT</p>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="value1">
+      <mat-header-cell *matHeaderCellDef> Apple </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.value1}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="value2">
+        <mat-header-cell *matHeaderCellDef> Google </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.value2}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="value3">
+        <mat-header-cell *matHeaderCellDef> Amazon </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.value3}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="value4">
+        <mat-header-cell *matHeaderCellDef> Facebook </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.value4}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="value5">
+        <mat-header-cell *matHeaderCellDef> Netflix </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.value5}} </mat-cell>
+      </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>

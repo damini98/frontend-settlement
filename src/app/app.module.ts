@@ -12,11 +12,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatTable, MatTableModule } from '@angular/material/table';
+import { StockobligationComponent } from './stockobligation/stockobligation.component';
+import { FundobligationComponent } from './fundobligation/fundobligation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    StockobligationComponent,
+    FundobligationComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
