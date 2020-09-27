@@ -11,12 +11,21 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTabsModule} from '@angular/material/tabs';
+//import {MatFormModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -24,10 +33,16 @@ import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     BrowserAnimationsModule,
     MatButtonModule,
     LayoutModule,
+    FormsModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatTabsModule,
+    MatInputModule,
+  
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
