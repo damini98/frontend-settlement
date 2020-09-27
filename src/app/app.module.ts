@@ -17,14 +17,16 @@ import {MatTabsModule} from '@angular/material/tabs';
 //import {MatFormModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
-
-import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LoginComponent } from './login/login.component';
+import { OverviewtableComponent } from './overviewtable/overviewtable.component';
+import { MatTableModule } from '@angular/material/table';
+import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    OverviewtableComponent,
     LoginComponent
   ],
   imports: [
@@ -38,11 +40,11 @@ import { LoginComponent } from './login/login.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
     MatCardModule,
     MatCheckboxModule,
     MatTabsModule,
     MatInputModule,
-  
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
