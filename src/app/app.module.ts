@@ -14,14 +14,12 @@ import { MatListModule } from '@angular/material/list';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { OverviewtableComponent } from './overviewtable/overviewtable.component';
 import { MatTableModule } from '@angular/material/table';
-import { BoxesComponent } from './boxes/boxes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     OverviewtableComponent,
-    BoxesComponent
   ],
   imports: [
     BrowserModule,
