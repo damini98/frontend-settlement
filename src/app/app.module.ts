@@ -14,12 +14,14 @@ import { MatListModule } from '@angular/material/list';
 import {MatTableModule}  from '@angular/material/table';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CostSettlementReportComponent } from './cost-settlement-report/cost-settlement-report.component';
+import { CorporateActionComponent } from './corporate-action/corporate-action.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CostSettlementReportComponent
+    CostSettlementReportComponent,
+    CorporateActionComponent
   ],
   imports: [
     BrowserModule,
