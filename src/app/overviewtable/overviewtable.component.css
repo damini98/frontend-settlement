@@ -10,3 +10,8 @@
     padding: 6px;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

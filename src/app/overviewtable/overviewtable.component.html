@@ -1,6 +1,7 @@
 <div class="flex-container">
-  TRADE BOOK
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div>
+<table mat-table [dataSource]="dataSourceOne" class="mat-elevation-z8">
+     <caption>Opening Balance</caption> 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
@@ -28,8 +29,48 @@
       <td mat-cell *matCellDef="let element">{{element.google}}</td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <ng-container matColumnDef="facebook">
+      <th mat-header-cell *matHeaderCellDef> Facebook </th>
+      <td mat-cell *matCellDef="let element"> {{element.facebook}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="amazon">
+      <th mat-header-cell *matHeaderCellDef> Amazon </th>
+      <td mat-cell *matCellDef="let element"> {{element.amazon}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="netflix">
+      <th mat-header-cell *matHeaderCellDef> Netflix </th>
+      <td mat-cell *matCellDef="let element"> {{element.netflix}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsOne"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsOne;"></tr>
   </table>
-  INTEREST RATES
+</div>
+
+
+<div>
+  <table mat-table [dataSource]="dataSourceTwo" class="mat-elevation-z8">
+   <caption>Borrowing Rate</caption> 
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="stock">
+      <th mat-header-cell *matHeaderCellDef> Stock</th>
+      <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="borrowingcost">
+      <th mat-header-cell *matHeaderCellDef>Cost of Borrowing</th>
+      <td mat-cell *matCellDef="let element"> {{element.borrowingcost}} </td>
+    </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsTwo"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsTwo;"></tr>
+  </table>
+  </div>
 </div>
