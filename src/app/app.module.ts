@@ -11,6 +11,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTabsModule} from '@angular/material/tabs';
+//import {MatFormModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { OverviewtableComponent } from './overviewtable/overviewtable.component';
+import { MatTableModule } from '@angular/material/table';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatTable, MatTableModule } from '@angular/material/table';
 import { StockobligationComponent } from './stockobligation/stockobligation.component';
@@ -22,6 +31,8 @@ import { FundobligationComponent } from './fundobligation/fundobligation.compone
     NavbarComponent,
     StockobligationComponent,
     FundobligationComponent,
+    OverviewtableComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +40,16 @@ import { FundobligationComponent } from './fundobligation/fundobligation.compone
     BrowserAnimationsModule,
     MatButtonModule,
     LayoutModule,
+    FormsModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
     MatTableModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatTabsModule,
+    MatInputModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
