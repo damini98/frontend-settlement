@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CorporateActionComponent } from './corporate-action/corporate-action.component';
+import { CostSettlementReportComponent } from './cost-settlement-report/cost-settlement-report.component';
 import { FundobligationComponent } from './fundobligation/fundobligation.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -27,8 +29,11 @@ const routes: Routes = [{
   component: FundobligationComponent
 }, {
   path: 'csreport',
-  component: LoginComponent
-  //TODO
+  component: CostSettlementReportComponent
+}, {
+  path: 'careport',
+  component: CorporateActionComponent
+  
 }];
 
 @NgModule({

@@ -7,17 +7,16 @@
     [mode]="(isHandset$ | async) ? 'side' : 'push'"
     [opened]="(isHandset$ | async) === true"
   >
-    <!-- <mat-toolbar>Menu</mat-toolbar> -->
-    <mat-toolbar color="indigo">
+    <mat-toolbar color="indigo" >
       <span> Menu</span>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="/overview"> Overview</a>
+      <a mat-list-item href="/overview" > Overview</a>
       <a mat-list-item href="/tradebook">Tradebook</a>
       <a mat-list-item href="/stockOb">Stock Obligation</a>
       <a mat-list-item href="/fundOb">Fund Obligation</a>
       <a mat-list-item href="/csreport">Cost Settlement Report</a>
-      <!-- <a mat-list-item href="#">Corporate Actions Report</a> -->
+      <a mat-list-item href="/careport">Corporate Actions Report</a>
       <a mat-list-item href="/login">Logout</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -29,16 +28,12 @@
         mat-icon-button
         (click)="drawer.toggle()"
         class="primary"
+        *ngIf="!loggedIn" class="disabled"
       >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon" >menu</mat-icon>
       </button>
       <span>Clearing House</span>
     </mat-toolbar>
     <ng-content></ng-content>
-    <!-- <app-overviewtable *ngIf="true;else nav"></app-overviewtable> -->
-    <!-- <ng-template #nav>
-      <p> hi</p> -->
-    <!-- <router-outlet> </router-outlet> -->
-    <!-- </ng-template>     -->
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -31,7 +31,7 @@ import { FundobligationComponent } from './fundobligation/fundobligation.compone
     AppComponent,
     NavbarComponent,
     CostSettlementReportComponent,
-    CorporateActionComponent
+    CorporateActionComponent,
     StockobligationComponent,
     FundobligationComponent,
     OverviewtableComponent,
