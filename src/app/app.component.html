@@ -1,4 +1,10 @@
-<app-navbar></app-navbar> 
-<button mat-button> Click Me </button>
-<app-cost-settlement-report></app-cost-settlement-report> 
-<app-corporate-action></app-corporate-action> 
+
+<app-navbar> 
+  <router-outlet> </router-outlet>
+</app-navbar>
+
+<!-- <app-login *ngIf="loggedIn;else:loggedOut"></app-login>
+<ng-template #loggedOut>
+  
+</ng-template> -->
+
