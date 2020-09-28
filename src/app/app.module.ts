@@ -21,11 +21,16 @@ import { LoginComponent } from './login/login.component';
 import { OverviewtableComponent } from './overviewtable/overviewtable.component';
 import { MatTableModule } from '@angular/material/table';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatTable, MatTableModule } from '@angular/material/table';
+import { StockobligationComponent } from './stockobligation/stockobligation.component';
+import { FundobligationComponent } from './fundobligation/fundobligation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    StockobligationComponent,
+    FundobligationComponent,
     OverviewtableComponent,
     LoginComponent
   ],
