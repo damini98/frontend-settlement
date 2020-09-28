@@ -11,6 +11,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { CostSettlementReportComponent } from './cost-settlement-report/cost-settlement-report.component';
+import { CorporateActionComponent } from './corporate-action/corporate-action.component';
 import { MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -28,6 +30,8 @@ import { FundobligationComponent } from './fundobligation/fundobligation.compone
   declarations: [
     AppComponent,
     NavbarComponent,
+    CostSettlementReportComponent,
+    CorporateActionComponent
     StockobligationComponent,
     FundobligationComponent,
     OverviewtableComponent,
