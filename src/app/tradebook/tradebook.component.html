@@ -1,0 +1,47 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="trade">
+    <th mat-header-cell *matHeaderCellDef> Trade No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.trade}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="buyer">
+    <th mat-header-cell *matHeaderCellDef> Buyer CM</th>
+    <td mat-cell *matCellDef="let element"> {{element.buyer}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="seller">
+    <th mat-header-cell *matHeaderCellDef> Seller CM </th>
+    <td mat-cell *matCellDef="let element"> {{element.seller}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="stock">
+    <th mat-header-cell *matHeaderCellDef> Stock </th>
+    <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef> Price </th>
+    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="qty">
+    <th mat-header-cell *matHeaderCellDef> Quantity </th>
+    <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tradevol">
+    <th mat-header-cell *matHeaderCellDef> Trade Vol </th>
+    <td mat-cell *matCellDef="let element"> {{element.tradevol}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
