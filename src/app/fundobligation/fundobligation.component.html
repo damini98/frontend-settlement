@@ -1,12 +1,13 @@
 <p text-align='center'>FundOBLIGATION REPORT</p>
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<p> {{ getData[0] | async | json }} </p>
+<mat-table class="mat-elevation-z8">
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      <mat-header-cell *matHeaderCellDef> CM </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ getData[0].name | async }} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="value1">
-      <mat-header-cell *matHeaderCellDef> Apple </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.value1}} </mat-cell>
+      <mat-header-cell *matHeaderCellDef> Fund Obligation </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{getData.value1 | async }} </mat-cell>
     </ng-container>
 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 export interface StockObligation {
   name: string;
-  value1: number;
-  value2: number;
-  value3: number;
-  value4: number;
-  value5: number;
+  google: number; //TODO:apple
+  amazon: number;
+  apple: number;
+  netflix: number;
+  facebook: number;
 }
 
 const ELEMENT_DATA: StockObligation[] = [
-  {name: 'Citi', value1: 34, value2: 66,value3:89,value4:123,value5:78},
-  {name: 'DB', value1: 34, value2: 66,value3:89,value4:123,value5:78},
-  {name: 'Citi', value1: 34, value2: 66,value3:89,value4:123,value5:78},
-  {name: 'Citi', value1: 34, value2: 66,value3:89,value4:123,value5:78},
-  {name: 'Citi', value1: 34, value2: 66,value3:89,value4:123,value5:78},
+  {name: 'Citi', google: 34, amazon: 66,apple:89,netflix:123,facebook:78},
+  {name: 'DB', google: 34, amazon: 66,apple:89,netflix:123,facebook:78},
+  {name: 'Citi', google: 34, amazon: 66,apple:89,netflix:123,facebook:78},
+  {name: 'Citi', google: 34, amazon: 66,apple:89,netflix:123,facebook:78},
+  {name: 'Citi', google: 34, amazon: 66,apple:89,netflix:123,facebook:78},
   
 
 
@@ -23,7 +23,7 @@ const ELEMENT_DATA: StockObligation[] = [
   templateUrl: './stockobligation.component.html',
   styleUrls: ['./stockobligation.component.css']
 })
-export class StockobligationComponent implements OnInit {displayedColumns: string[] = [ 'name', 'value1', 'value2','value3','value4','value5'];
+export class StockobligationComponent implements OnInit {displayedColumns: string[] = [ 'name', 'google', 'amazon','apple','netflix','facebook'];
 dataSource = ELEMENT_DATA;
 
   constructor() { }

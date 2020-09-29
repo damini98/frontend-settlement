@@ -4,26 +4,27 @@
       <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
     </ng-container>
-    <ng-container matColumnDef="value1">
-      <mat-header-cell *matHeaderCellDef> Apple </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.value1}} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="value2">
+    <ng-container matColumnDef="google">
         <mat-header-cell *matHeaderCellDef> Google </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.value2}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.google}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="value3">
+      <ng-container matColumnDef="amazon">
         <mat-header-cell *matHeaderCellDef> Amazon </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.value3}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.amazon}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="value4">
-        <mat-header-cell *matHeaderCellDef> Facebook </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.value4}} </mat-cell>
+      <ng-container matColumnDef="apple">
+        <mat-header-cell *matHeaderCellDef> Apple </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.apple}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="value5">
+      <ng-container matColumnDef="netflix">
         <mat-header-cell *matHeaderCellDef> Netflix </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.value5}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.netflix}} </mat-cell>
       </ng-container>
+      <ng-container matColumnDef="facebook">
+        <mat-header-cell *matHeaderCellDef> Facebook </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.facebook}} </mat-cell>
+      </ng-container>
+
   
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
