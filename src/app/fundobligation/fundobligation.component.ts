@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FundserviceService} from './fundservice.service';
 
+
 export interface FundObligation {
   name: string;
   value1: number;
@@ -28,25 +29,21 @@ export interface FundObligation {
   templateUrl: './fundobligation.component.html',
   styleUrls: ['./fundobligation.component.css']
 })
-export class FundobligationComponent implements OnInit {displayedColumns: string[] = [ 'name', 'value1'];
+export class FundobligationComponent implements OnInit {
 // dataSource = ELEMENT_DATA;
 
-getData; //obs
+public fundobligation =[];
 constructor(private _httpService:FundserviceService) { }
 
 
   ngOnInit(): void {
-    this.getFundDetails();
+    
+  
+  
+
+    this._httpService.getFund().subscribe(data => this.fundobligation =data);
+     
+    
+  
   }
-  getFundDetails(){
-
-    this._httpService.getFund().subscribe((res : any)=>{
-      console.log(res);
-      //this.logger.debug(res);
-      this.getData = res;
-  
-    });
-    }
-  
-
 }
