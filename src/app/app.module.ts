@@ -15,6 +15,8 @@ import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { OverviewtableComponent } from './overviewtable/overviewtable.component';
 import { MatTableModule } from '@angular/material/table';
 import { TradebookComponent } from './tradebook/tradebook.component';
+import { CmTradebookComponent } from './cm-tradebook/cm-tradebook.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { TradebookComponent } from './tradebook/tradebook.component';
     NavbarComponent,
     OverviewtableComponent,
     TradebookComponent,
+    CmTradebookComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { TradebookComponent } from './tradebook/tradebook.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
