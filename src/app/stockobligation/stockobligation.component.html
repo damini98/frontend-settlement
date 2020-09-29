@@ -1,28 +1,28 @@
 <p text-align='center'>STOCK OBLIGATION REPORT</p>
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<mat-table [dataSource]="getData" class="mat-elevation-z8">
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.name | json}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="google">
         <mat-header-cell *matHeaderCellDef> Google </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.google}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.google | json }} </mat-cell>
       </ng-container>
       <ng-container matColumnDef="amazon">
         <mat-header-cell *matHeaderCellDef> Amazon </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.amazon}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.amazon | json}} </mat-cell>
       </ng-container>
       <ng-container matColumnDef="apple">
         <mat-header-cell *matHeaderCellDef> Apple </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.apple}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.apple| json}} </mat-cell>
       </ng-container>
       <ng-container matColumnDef="netflix">
         <mat-header-cell *matHeaderCellDef> Netflix </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.netflix}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.netflix | json}} </mat-cell>
       </ng-container>
       <ng-container matColumnDef="facebook">
         <mat-header-cell *matHeaderCellDef> Facebook </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.facebook}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.facebook | json}} </mat-cell>
       </ng-container>
 
   

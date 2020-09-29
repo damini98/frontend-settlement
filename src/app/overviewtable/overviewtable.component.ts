@@ -4,9 +4,11 @@ import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 
+
 /**
  * @title Table with pagination
  */
+export class CardOverviewExample {}
 export interface OpeningBalance {
   clearingmember: string;
   cash: number;
