@@ -11,17 +11,32 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CostSettlementReportComponent } from './cost-settlement-report/cost-settlement-report.component';
+import { CorporateActionComponent } from './corporate-action/corporate-action.component';
+import { MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTabsModule} from '@angular/material/tabs';
+//import {MatFormModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 import { OverviewtableComponent } from './overviewtable/overviewtable.component';
 import { MatTableModule } from '@angular/material/table';
 import { TradebookComponent } from './tradebook/tradebook.component';
+import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { StockobligationComponent } from './stockobligation/stockobligation.component';
+import { FundobligationComponent } from './fundobligation/fundobligation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    OverviewtableComponent,
+    CostSettlementReportComponent,
+    CorporateActionComponent,
+    StockobligationComponent,
+    FundobligationComponent,
     TradebookComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +44,16 @@ import { TradebookComponent } from './tradebook/tradebook.component';
     BrowserAnimationsModule,
     MatButtonModule,
     LayoutModule,
+    FormsModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatTabsModule,
+    MatInputModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
