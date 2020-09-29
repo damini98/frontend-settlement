@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {FundserviceService} from './fundservice.service';
+import { FundserviceService } from './fundservice.service';
 
 export interface FundObligation {
   name: string;
   value1: number;
-  
+
 }
 
 // const ELEMENT_DATA: FundObligation[] = [
@@ -13,7 +13,7 @@ export interface FundObligation {
 //   {name: 'JPMC', value1: 94},
 //   {name: 'MS', value1: 47},
 //   {name: 'GS', value1: 30},
-  
+
 //   {
 //     "Deutsche Bank": 7000,
 //     "JP Morgan": 1000,
@@ -28,25 +28,20 @@ export interface FundObligation {
   templateUrl: './fundobligation.component.html',
   styleUrls: ['./fundobligation.component.css']
 })
-export class FundobligationComponent implements OnInit {displayedColumns: string[] = [ 'name', 'value1'];
-// dataSource = ELEMENT_DATA;
+export class FundobligationComponent implements OnInit {
+  displayedColumns: string[] = ['name', 'value1'];
+  // dataSource = ELEMENT_DATA;
 
-getData; //obs
-constructor(private _httpService:FundserviceService) { }
+  public getData = []; //obs
+  constructor(private _httpService: FundserviceService) { }
 
 
   ngOnInit(): void {
-    this.getFundDetails();
+    this._httpService.getFund().subscribe(data => this.getData = data);
   }
-  getFundDetails(){
 
-    this._httpService.getFund().subscribe((res : any)=>{
-      console.log(res);
-      //this.logger.debug(res);
-      this.getData = res;
-  
-    });
-    }
-  
+  //  console.log(res);
+  //this.logger.debug(res);
+
 
 }
