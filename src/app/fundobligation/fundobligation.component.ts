@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FundserviceService } from './fundservice.service';
 
+
 export interface FundObligation {
   name: string;
   value1: number;
@@ -37,11 +38,6 @@ export class FundobligationComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this._httpService.getFund().subscribe(data => this.getData = data);
+    this._httpService.getFund().subscribe(data => this.getData = data);  
   }
-
-  //  console.log(res);
-  //this.logger.debug(res);
-
-
 }
