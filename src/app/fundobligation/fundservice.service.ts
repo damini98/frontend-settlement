@@ -8,6 +8,6 @@ import { Observable } from 'rxjs';
 export class FundserviceService {
   constructor(private http: HttpClient) { }
   getFund(): Observable<FundObligation[]> {
-    return this.http.get<FundObligation[]>('http://localhost:7000/fund/list');
+    return this.http.get<FundObligation[]>('http://localhost:8888/fund-obligation');
   }
 }

@@ -1,13 +1,13 @@
-<p text-align="center">FundOBLIGATION REPORT</p>
-<!-- <p> {{ getData[0].name | json }} </p> -->
+<h2 text-align="center">Fund Obligation Report</h2>
+
 <mat-table class="mat-elevation-z8" [dataSource] = "getData">
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="clearingMemberName">
       <mat-header-cell *matHeaderCellDef> CM </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{ element.name | json }} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{ element.clearingMemberName }} </mat-cell>
     </ng-container>
-    <ng-container matColumnDef="value1">
+    <ng-container matColumnDef="fundObligationAmount">
       <mat-header-cell *matHeaderCellDef> Fund Obligation </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.value1 | json }} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.fundObligationAmount}} </mat-cell>
     </ng-container>
 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

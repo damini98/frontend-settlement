@@ -3,26 +3,9 @@ import { FundserviceService } from './fundservice.service';
 
 
 export interface FundObligation {
-  name: string;
-  value1: number;
-
+  clearingMemberName: string;
+  fundObligationAmount: number;
 }
-
-// const ELEMENT_DATA: FundObligation[] = [
-//   {name: 'Citi', value1: 34},
-//   {name: 'DB', value1: 56},
-//   {name: 'JPMC', value1: 94},
-//   {name: 'MS', value1: 47},
-//   {name: 'GS', value1: 30},
-
-//   {
-//     "Deutsche Bank": 7000,
-//     "JP Morgan": 1000,
-//     "Citi": -8000,
-//     "Goldman Sachs": 0,
-//     "Morgan Stanley": 0
-// }
-//];
 
 @Component({
   selector: 'app-fundobligation',
@@ -30,10 +13,10 @@ export interface FundObligation {
   styleUrls: ['./fundobligation.component.css']
 })
 export class FundobligationComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'value1'];
+  displayedColumns: string[] = ['clearingMemberName', 'fundObligationAmount'];
   // dataSource = ELEMENT_DATA;
 
-  public getData = []; //obs
+  public getData = [];
   constructor(private _httpService: FundserviceService) { }
 
 
