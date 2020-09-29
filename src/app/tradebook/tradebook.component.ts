@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { TradebookService } from './tradebook.service';
 
 export interface Trades {
-  stock: string;
-  trade: number;
+  stockName: string;
+  tradeID: number;
   price: number;
-  buyer: string;
-  seller: string;
-  qty: number;
-  tradevol: number;
+  buyerName: string;
+  sellerName: string;
+  quantity: number;
+  tradeValue: number;
 }
 
-const ELEMENT_DATA: Trades[] = [
-  {trade: 1, stock: 'Apple', price: 1, buyer: 'Citi', seller: 'MS' ,qty: 10 ,tradevol: 10},
-  {trade: 2, stock: 'Apple', price: 4, buyer: 'Citi',seller: 'Citi' ,qty:10 ,tradevol:40 },
-  {trade: 3, stock: 'Netflix', price: 6, buyer: 'GS',seller: 'BoA',qty:10 ,tradevol:60},
-  {trade: 4, stock: 'Amazon', price: 9, buyer: 'MS',seller: 'BoA' ,qty:10 ,tradevol:90},
-  {trade: 5, stock: 'Facebook', price: 10, buyer: 'Citi', seller:'GS' ,qty:10 ,tradevol:100},
-];
+// const ELEMENT_DATA: Trades[] = [
+//   {trade: 1, stockName: 'Apple', price: 1, buyerName: 'Citi', sellerName: 'MS' ,quantity: 10 ,tradeValue: 10},
+//   {trade: 2, stockName: 'Apple', price: 4, buyerName: 'Citi',sellerName: 'Citi' ,quantity:10 ,tradeValue:40 },
+//   {trade: 3, stockName: 'Netflix', price: 6, buyerName: 'GS',sellerName: 'BoA',quantity:10 ,tradeValue:60},
+//   {trade: 4, stockName: 'Amazon', price: 9, buyerName: 'MS',sellerName: 'BoA' ,quantity:10 ,tradeValue:90},
+//   {trade: 5, stockName: 'Facebook', price: 10, buyerName: 'Citi', sellerName:'GS' ,quantity:10 ,tradeValue:100},
+// ];
 
 @Component({
   selector: 'app-tradebook',
@@ -26,7 +27,14 @@ const ELEMENT_DATA: Trades[] = [
 export class TradebookComponent {
 
 
-  displayedColumns: string[] = ['trade', 'buyer', 'seller','stock', 'price', 'qty','tradevol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['tradeID', 'buyerName', 'sellerName','stockName', 'price', 'quantity','tradeValue'];
+  //dataSource = ELEMENT_DATA;
+  public getData = []; //obs
+  constructor(private _httpService: TradebookService ) { }
 
+
+  ngOnInit(): void {
+    this._httpService.getTradebook().subscribe(data => this.getData = data);
+
+}
 }
