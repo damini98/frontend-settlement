@@ -1,9 +1,9 @@
-<p text-align='center'>FundOBLIGATION REPORT</p>
-<!-- <p> {{ getData[0].name | json }} </p> -->
-<mat-table class="mat-elevation-z8" [getData] = "getData">
+<p text-align="center">FundOBLIGATION REPORT</p>
+<p> {{ getData[0].name | json }} </p>
+<!-- <mat-table class="mat-elevation-z8" [getData] = "getData">
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef> CM </mat-header-cell>
-      <mat-cell *matCellDef="let xyz"> {{ xyz[0].name | json }} </mat-cell>
+      <mat-cell *matCellDef="let xyz of getData"> {{ xyz[0].name | json }} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="value1">
       <mat-header-cell *matHeaderCellDef> Fund Obligation </mat-header-cell>
@@ -11,4 +11,6 @@
     </ng-container>
 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
+  </mat-table> -->
+
+
