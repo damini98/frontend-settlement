@@ -9,43 +9,43 @@
 
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
+    <ng-container matRowDef="stockName">
       <mat-header-cell  *matHeaderCellDef>Name of Stock</mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.name | json}}</mat-cell>
+      <mat-cell *matCellDef="let element">{{element.stockName | json}}</mat-cell>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="apple">
-      <mat-header-cell  *matHeaderCellDef>Apple</mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.apple | json}}</mat-cell>
+    <ng-container matRowDef="openingBalance">
+      <mat-header-cell  *matHeaderCellDef>Opening Balance</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.openingBalance | json}}</mat-cell>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="google">
-      <mat-header-cell *matHeaderCellDef>Google</mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.google | json}}</mat-cell>
+    <ng-container matRowDef="dailyObligation">
+      <mat-header-cell *matHeaderCellDef>Daily Obligation</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.dailyObligation | json}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="facebook">
-      <mat-header-cell  *matHeaderCellDef> Facebook </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.facebook | json}} </mat-cell>
+    <ng-container matRowDef="netTotal">
+      <mat-header-cell  *matHeaderCellDef> Net Total </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.netTotal| json}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="amazon">
-      <mat-header-cell  *matHeaderCellDef> Amazon </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.amazon | json}} </mat-cell>
+    <ng-container matRowDef="corporateAction">
+      <mat-header-cell  *matHeaderCellDef>Corporate Actions </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.corporateAction | json}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="netflix">
-      <mat-header-cell  *matHeaderCellDef> Netflix </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.netflix | json}} </mat-cell>
+    <ng-container matRowDef="closingBalance">
+      <mat-header-cell  *matHeaderCellDef> Closing Balance</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.closingBalance | json}} </mat-cell>
     </ng-container>
     
     
     
   
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-header-column *matHeaderColumnDef="displayedColumns"></mat-header-column>
+    <mat-row *matRowDef="let row; rows: displayedRows;"></mat-row>
   </mat-table>
   
   
