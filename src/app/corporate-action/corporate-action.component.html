@@ -1,7 +1,6 @@
 <p text-align ="center">Corporate Actions Report</p> 
 <mat-table [dataSource]="getData" class="mat-elevation-z8">
 
-
 <ng-container matColumnDef="stockName">
   <mat-header-cell  *matHeaderCellDef>Name of Stock</mat-header-cell>
   <mat-cell *matCellDef="let element">{{element.stockName | json}}</mat-cell>
@@ -117,18 +116,3 @@
   <tr mat-row *matColumnDef="let row; columns: displayedColumns;"></tr>
 </table>  -->
 
-
-
-
-
-
-
-
-   
-  
-
-         
-
-
-    
-    

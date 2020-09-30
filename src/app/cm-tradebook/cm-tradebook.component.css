@@ -1,14 +1,8 @@
-
 .mat-table {
-    margin: 10px;
+    margin: 50px;
   }
 
-.mat-card {
-    width: 3cm;
-    text-align: center;
-    align-content: center;
 
-}
 
   table tr td {
     width: 120px;
@@ -18,5 +12,13 @@
 .flex-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+tr.is-red {
+    background: red;
+}
+
+tr.is-green{
+    background: green;
 }
