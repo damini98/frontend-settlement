@@ -1,0 +1,43 @@
+<p text-align ="center">Corporate Actions Report</p> 
+<mat-table [dataSource]="getData" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell  *matHeaderCellDef>Name of Stock</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.name | json}}</mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="apple">
+      <mat-header-cell  *matHeaderCellDef>Apple</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.apple | json}}</mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="google">
+      <mat-header-cell *matHeaderCellDef>Google</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.google | json}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="facebook">
+      <mat-header-cell  *matHeaderCellDef> Facebook </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.facebook | json}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amazon">
+      <mat-header-cell  *matHeaderCellDef> Amazon </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.amazon | json}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="netflix">
+      <mat-header-cell  *matHeaderCellDef> Netflix </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.netflix | json}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+    
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

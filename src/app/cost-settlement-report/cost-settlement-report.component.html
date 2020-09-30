@@ -1,0 +1,36 @@
+
+<p text-align ="center">Cost Settlement Report</p>
+<mat-table [dataSource]="getData" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="op">
+      <mat-header-cell  *matHeaderCellDef> Opening Balance </mat-header-cell>
+      <mat-cell  *matCellDef="let element"> {{element.op}} </mat-cell>
+    </ng-container>
+  
+    
+    <ng-container matColumnDef="do">
+      <mat-header-cell  *matHeaderCellDef> Daily Obligation</mat-header-cell>
+      <mat-cell  *matCellDef="let element"> {{element.do}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="cof">
+      <mat-header-cell  *matHeaderCellDef> Cost of funds </mat-header-cell>
+      <mat-cell  *matCellDef="let element"> {{element.cof}} </mat-cell>
+    </ng-container>
+  
+    
+    <ng-container matColumnDef="cos">
+      <mat-header-cell  *matHeaderCellDef> Cost of Securities </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.cos}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="total">
+      <mat-header-cell  *matHeaderCellDef> Total</mat-header-cell>
+      <mat-cell  *matCellDef="let element"> {{element.total}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  
+  
