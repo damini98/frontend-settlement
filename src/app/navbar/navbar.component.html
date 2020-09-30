@@ -8,7 +8,7 @@
     [opened]="(isHandset$ | async) === true"
   >
     <mat-toolbar color="indigo" >
-      <span> Menu</span>
+      <span> Menu {{loginID}}</span>
     </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="/overview" > Overview</a>
@@ -17,6 +17,9 @@
       <a mat-list-item href="/fundOb">Fund Obligation</a>
       <a mat-list-item href="/csreport">Cost Settlement Report</a>
       <a mat-list-item href="/careport">Corporate Actions Report</a>
+      <a mat-list-item href="/cm-tradebook"> CM Tradebook</a>
+      
+      <!-- <a routerLink="/cm-tradebook"  > CM Tradebook</a> -->
       <a mat-list-item href="/login">Logout</a>
     </mat-nav-list>
   </mat-sidenav>

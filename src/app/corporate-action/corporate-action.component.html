@@ -1,13 +1,5 @@
 <p text-align ="center">Corporate Actions Report</p> 
 <mat-table [dataSource]="getData" class="mat-elevation-z8">
-
-    <!--- Note mat-header-cellat mat-header-cellese columns can be defined in any order.
-          mat-header-celle actual rendered columns are set as a property on mat-header-celle row definition" -->
-  
-
-         
-
-
     <!-- Name Column -->
     <ng-container matRowDef="stockName">
       <mat-header-cell  *matHeaderCellDef>Name of Stock</mat-header-cell>
@@ -40,13 +32,7 @@
       <mat-header-cell  *matHeaderCellDef> Closing Balance</mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.closingBalance | json}} </mat-cell>
     </ng-container>
-    
-    
-    
   
-    <mat-header-column *matHeaderColumnDef="displayedColumns"></mat-header-column>
-    <mat-row *matRowDef="let row; rows: displayedRows;"></mat-row>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-  
-  
-  

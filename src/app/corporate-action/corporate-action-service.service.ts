@@ -10,7 +10,7 @@ export class CorporateActionServiceService {
 
   constructor(private http: HttpClient) { }
   getCorporateAction():Observable<CorporateAction[]>{
-    return this.http.get<CorporateAction[]>('http://localhost:7000/corporate-action/list');
+    return this.http.get<CorporateAction[]>('http://localhost:4200/cm-corporate-action-report?cmid=1');
   }
 
 }
