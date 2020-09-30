@@ -1,18 +1,18 @@
-<p text-align ="center">Corporate Actions Report</p> 
+<!-- <p text-align ="center">Corporate Actions Report</p> 
 <mat-table [dataSource]="getData" class="mat-elevation-z8">
-    <!-- Name Column -->
+    
     <ng-container matRowDef="stockName">
       <mat-header-cell  *matHeaderCellDef>Name of Stock</mat-header-cell>
       <mat-cell *matCellDef="let element">{{element.stockName | json}}</mat-cell>
     </ng-container>
 
-    <!-- Weight Column -->
+  
     <ng-container matRowDef="openingBalance">
       <mat-header-cell  *matHeaderCellDef>Opening Balance</mat-header-cell>
       <mat-cell *matCellDef="let element">{{element.openingBalance | json}}</mat-cell>
     </ng-container>
 
-    <!-- Symbol Column -->
+
     <ng-container matRowDef="dailyObligation">
       <mat-header-cell *matHeaderCellDef>Daily Obligation</mat-header-cell>
       <mat-cell *matCellDef="let element">{{element.dailyObligation | json}}</mat-cell>
@@ -35,4 +35,4 @@
   
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
+  </mat-table> -->

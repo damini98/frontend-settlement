@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import {Observable} from 'rxjs';
 import { CmTradebookComponent } from './cm-tradebook.component';
 // import { GlobalData } from '../assets/data/global-data';
@@ -8,11 +8,9 @@ import { CmTradebookComponent } from './cm-tradebook.component';
   providedIn: 'root'
 })
 export class CmTradebookService {
-
   constructor(private http:HttpClient){} 
   getCmTradebook():Observable<CmTradebookComponent[]> {
-    
-    // console.log();
-    return this.http.get<CmTradebookComponent[]>("http://localhost:8888/cm-tradebook?cmid=4")
+    const params = new HttpParams().set('cmid', '2');
+    return this.http.get<CmTradebookComponent[]>( "http://localhost:8888/cm-tradebook", {params});
   }
 }
