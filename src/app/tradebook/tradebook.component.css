@@ -1,0 +1,16 @@
+.mat-table {
+    margin: 50px;
+  }
+
+
+
+  table tr td {
+    width: 120px;
+    padding: 6px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
