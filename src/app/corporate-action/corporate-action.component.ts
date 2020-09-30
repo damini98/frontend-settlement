@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CorporateActionServiceService } from './corporate-action-service.service';
 
 export interface CorporateAction {
-  name: string;
-  apple: number;
-  google: number;
-  facebook:number;
-  amazon:number;
-  netflix: number;
+  stockName: string;
+  openingBalance: number;
+  dailyObligation: number;
+  netTotal:number;
+  corporateAction:number;
+  closingBalance: number;
 
 }
 
@@ -17,7 +17,7 @@ export interface CorporateAction {
   styleUrls: ['./corporate-action.component.css']
 })
 export class CorporateActionComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'apple','google','facebook','amazon','netflix'];
+  displayedRows: string[] = ['stockName', 'openingBalance','dailyObligation','netTotal','corporateAction','closingBalance'];
   public getData =[];//obs
   
   constructor(private _httpService: CorporateActionServiceService) { }

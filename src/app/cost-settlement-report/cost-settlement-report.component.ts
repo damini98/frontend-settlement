@@ -3,10 +3,10 @@ import { CostSettlementServiceService } from './cost-settlement-service.service'
 
 
 export interface CostSettlementReport {
-  op: number;
-  do: number;
-  cof: number;
-  cos: number;
+  openingBalance: number;
+  dailyObligation: number;
+  costOfFunds: number;
+  costOfSecurities: number;
   total: number;
 }
 
@@ -16,7 +16,7 @@ export interface CostSettlementReport {
   styleUrls: ['./cost-settlement-report.component.css']
 })
 export class CostSettlementReportComponent implements OnInit {
-  displayedColumns: string[] = ['op', 'do', 'cof', 'cos','total'];
+  displayedColumns: string[] = ['openingBalance', 'dailyObligation', 'costOfFunds', 'costOfSecurities','total'];
   public getData =[];
   constructor(private _httpService: CostSettlementServiceService) { }
 
