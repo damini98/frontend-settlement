@@ -17,7 +17,7 @@ export interface CorporateAction {
   styleUrls: ['./corporate-action.component.css']
 })
 export class CorporateActionComponent implements OnInit {
-  displayedRows: string[] = ['stockName', 'openingBalance','dailyObligation','netTotal','corporateAction','closingBalance'];
+  displayedColumns: string[] = ['stockName', 'openingBalance','dailyObligation','netTotal','corporateAction','closingBalance'];
   public getData =[];//obs
   
   constructor(private _httpService: CorporateActionServiceService) { }
