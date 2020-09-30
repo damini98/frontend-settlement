@@ -9,7 +9,13 @@ import { OverviewtableService } from './overviewtable.service';
 /**
  * @title Table with pagination
  */
-export class CardOverviewExample {}
+export interface TradeVolumeCard{
+  tradeVolume: number;
+}
+export interface CashInterestRateCard{
+  cashInterestRate: number;
+
+}
 export interface OpeningBalance {
   clearingmember: string;
   // cashBalance: number;
@@ -56,6 +62,9 @@ export class OverviewtableComponent implements OnInit{
   // dataSourceTwo: MatTableDataSource<InterestRates>;
   displayedColumnsTwo: string[] = ['stock', 'borrowingcost'];
 
+  displayedColumnCashInterestCard: string[]= ['cashInterestRate'];
+  displayedColumnTradeVolumeCard: string[]= ['tradeVolume'];
+
 
   // constructor() {
   //   this.dataSourceOne = new MatTableDataSource;
@@ -73,10 +82,16 @@ export class OverviewtableComponent implements OnInit{
   // }
   public getBalance=[] //obs
   public getRates=[]
+  public getCashRate=[]
+  public getTradeVolume=[]
+  public today= new Date()
   constructor(private _httpService: OverviewtableService) { }
   ngOnInit(): void {
+    
     this._httpService.getOpeningBalance().subscribe(data => this.getBalance = data);
     this._httpService.getInterestRates().subscribe(data => this.getRates = data);
-
-  }
-}
+    this._httpService.getCashInterestRate().subscribe(data => this.getCashRate = data);
+    this._httpService.getTradeVolume().subscribe(data => this.getTradeVolume = data);
+    
+  
+}}

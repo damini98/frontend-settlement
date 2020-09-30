@@ -1,8 +1,29 @@
-<div class="flex-container"><mat-card>Trade Volume</mat-card> 
-  <mat-card></mat-card> 
-  <mat-card>interest Rate</mat-card>
+<div class="flex-container">
+  <mat-card>
+    <!-- <mat-card-title>Trade Volume</mat-card-title> -->
+    <mat-table [dataSource]="getTradeVolume" class="mat-elevation-z8">
+    <ng-container matColumnDef="tradeVolume">
+      <mat-header-cell *matHeaderCellDef> Trade Volume </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.tradeVolume | json}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumnTradeVolumeCard"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumnTradeVolumeCard;"></mat-row>
+    </mat-table></mat-card> 
+  <mat-card>
+  <mat-card-content>{{today |date:'medium'}} </mat-card-content>
+  </mat-card> 
+  <mat-card>
+    <!-- <mat-card-title>Cash Borrowing Interest Rate</mat-card-title> -->
+    <mat-table [dataSource]="getCashRate" class="mat-elevation-z8">
+    <ng-container matColumnDef="cashInterestRate">
+      <mat-header-cell *matHeaderCellDef> Cash Interest Rate</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.cashInterestRate | json}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumnCashInterestCard"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumnCashInterestCard;"></mat-row>
+    </mat-table>
+  </mat-card>
 </div>
-
 <div class="flex-container">
 <div>
 <table mat-table [dataSource]="getBalance" class="mat-elevation-z8">
