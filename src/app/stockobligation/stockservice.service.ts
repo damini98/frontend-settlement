@@ -10,6 +10,6 @@ export class StockserviceService {
 
   constructor(private http: HttpClient) { }
   getStock():Observable<StockObligation[]>{
-    return this.http.get<StockObligation[]>('http://localhost:7000/stocks/list');
+    return this.http.get<StockObligation[]>('http://localhost:8888/stock-obligation');
   }
 }

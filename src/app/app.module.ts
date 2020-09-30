@@ -16,17 +16,19 @@ import { CorporateActionComponent } from './corporate-action/corporate-action.co
 import { MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTabsModule} from '@angular/material/tabs';
-//import {MatFormModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { OverviewtableComponent } from './overviewtable/overviewtable.component';
 import { MatTableModule } from '@angular/material/table';
+import { TradebookComponent } from './tradebook/tradebook.component';
+import { CmTradebookComponent } from './cm-tradebook/cm-tradebook.component';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { StockobligationComponent } from './stockobligation/stockobligation.component';
 import { FundobligationComponent } from './fundobligation/fundobligation.component';
 import { HttpClientModule} from '@angular/common/http';
 import { CmObligationComponent } from './cm-obligation/cm-obligation.component';
+import { FundserviceService } from './fundobligation/fundservice.service';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,10 @@ import { CmObligationComponent } from './cm-obligation/cm-obligation.component';
     OverviewtableComponent,
     LoginComponent,
     CmObligationComponent
+    TradebookComponent,
+    CmTradebookComponent,
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -62,7 +68,7 @@ import { CmObligationComponent } from './cm-obligation/cm-obligation.component';
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
-  providers: [],
+  providers: [FundserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

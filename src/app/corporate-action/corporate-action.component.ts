@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { CorporateActionServiceService } from './corporate-action-service.service';
 
-export interface PeriodicElement {
-  op: string;
-  value: number;
- 
-  
+export interface CorporateAction {
+  stockName: string;
+  openingBalance: number;
+  dailyObligation: number;
+  netTotal:number;
+  corporateAction:number;
+  closingBalance: number;
+
 }
-const ELEMENT_DATA: PeriodicElement[] = [
-  {op : 'Daily Obligation', value : 29000},
-  {op: 'Net Total',value : 56000 },
-  {op : 'Bonus',value : 8402},
-  {op : 'Closing Balance',value : 40305}
-];
 
 @Component({
   selector: 'app-corporate-action',
@@ -19,11 +17,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./corporate-action.component.css']
 })
 export class CorporateActionComponent implements OnInit {
-
-  constructor() { }
+  displayedRows: string[] = ['stockName', 'openingBalance','dailyObligation','netTotal','corporateAction','closingBalance'];
+  public getData =[];//obs
+  
+  constructor(private _httpService: CorporateActionServiceService) { }
 
   ngOnInit(): void {
+    this._httpService.getCorporateAction().subscribe(data => this.getData =data);
   }
-  displayedColumns: string[] = ['op', 'value'];
-  dataSource = ELEMENT_DATA;
 }
+
