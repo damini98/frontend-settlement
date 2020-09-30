@@ -3,7 +3,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 
 
 export interface DialogData {
-  buyersellerName: string;
+  buyerName: string;
   sellerName: string;
 }
 
@@ -16,7 +16,7 @@ export interface DialogData {
 
 export class AddtradeComponent {
 
-  buyersellerName: string;
+  buyerName: string;
   sellerName: string;
 
   constructor(public dialog: MatDialog) {}
@@ -24,12 +24,12 @@ export class AddtradeComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(AddtradeDialog, {
       width: '250px',
-      data: {sellerName: this.sellerName, buyersellerName: this.buyersellerName}
+      data: {sellerName: this.sellerName, buyerName: this.buyerName}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.buyersellerName = result;
+      this.buyerName = result;
     });
 
 }
