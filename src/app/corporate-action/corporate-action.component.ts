@@ -1,17 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { CorporateActionServiceService } from './corporate-action-service.service';
 
-export interface PeriodicElement {
-  op: string;
-  value: number;
- 
-  
+export interface CorporateAction {
+  name: string;
+  apple: number;
+  google: number;
+  facebook:number;
+  amazon:number;
+  netflix: number;
+
 }
-const ELEMENT_DATA: PeriodicElement[] = [
-  {op : 'Daily Obligation', value : 29000},
-  {op: 'Net Total',value : 56000 },
-  {op : 'Bonus',value : 8402},
-  {op : 'Closing Balance',value : 40305}
-];
+// const ELEMENT_DATA: CorporateAction[] = [
+//  {name : 'Opening Balance',apple: 1.0079, google: 1522,facebook:200 ,amazon:150, netflix:350},
+//  {name :'Daily Obligation',apple: 4.0026, google: 65,facebook:200 ,amazon:150, netflix:350},
+//  {name : 'Net Total',apple: 4.0026, google: 65,facebook:200 ,amazon:150, netflix:350},
+//  {name : 'Shortage',apple: 0, google: 0,facebook: 0  ,amazon: 0, netflix: 0},
+//  {name : 'Bonus',apple: 0, google: 0,facebook: 0  ,amazon: 0, netflix: 0},
+//  {name : 'Closing Balance',apple: 10.811, google: 78,facebook:200 ,amazon:150, netflix:350}
+// ];
 
 @Component({
   selector: 'app-corporate-action',
@@ -19,11 +25,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./corporate-action.component.css']
 })
 export class CorporateActionComponent implements OnInit {
-
-  constructor() { }
+  displayedColumns: string[] = ['name', 'apple','google','facebook','amazon','netflix'];
+  public getData =[];//obs
+  
+  constructor(private _httpService: CorporateActionServiceService) { }
 
   ngOnInit(): void {
+    this._httpService.getCorporateAction().subscribe(data => this.getData =data);
   }
-  displayedColumns: string[] = ['op', 'value'];
-  dataSource = ELEMENT_DATA;
+  
+  // dataSource = ELEMENT_DATA;
 }

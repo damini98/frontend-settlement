@@ -25,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { StockobligationComponent } from './stockobligation/stockobligation.component';
 import { FundobligationComponent } from './fundobligation/fundobligation.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { FundobligationComponent } from './fundobligation/fundobligation.compone
     MatCheckboxModule,
     MatTabsModule,
     MatInputModule,
+    HttpClientModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
