@@ -27,6 +27,7 @@ import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { StockobligationComponent } from './stockobligation/stockobligation.component';
 import { FundobligationComponent } from './fundobligation/fundobligation.component';
 import { HttpClientModule} from '@angular/common/http';
+import { CmObligationComponent } from './cm-obligation/cm-obligation.component';
 import { FundserviceService } from './fundobligation/fundservice.service';
 
 @NgModule({
@@ -38,9 +39,12 @@ import { FundserviceService } from './fundobligation/fundservice.service';
     StockobligationComponent,
     FundobligationComponent,
     OverviewtableComponent,
+    LoginComponent,
+    CmObligationComponent
     TradebookComponent,
     CmTradebookComponent,
     LoginComponent,
+
   ],
   imports: [
     BrowserModule,
