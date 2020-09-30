@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CorporateActionComponent } from './corporate-action/corporate-action.component';
 import { CostSettlementReportComponent } from './cost-settlement-report/cost-settlement-report.component';
 import { FundobligationComponent } from './fundobligation/fundobligation.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OverviewtableComponent } from './overviewtable/overviewtable.component';
 import { StockobligationComponent } from './stockobligation/stockobligation.component';
+import { TradebookComponent } from './tradebook/tradebook.component';
 
 const routes: Routes = [{
   path: '',
@@ -19,7 +19,7 @@ const routes: Routes = [{
   component: LoginComponent
 }, {
   path: 'tradebook',
-  component: LoginComponent
+  component: TradebookComponent
   //TODO
 }, {
   path: 'stockOb',
@@ -30,10 +30,6 @@ const routes: Routes = [{
 }, {
   path: 'csreport',
   component: CostSettlementReportComponent
-}, {
-  path: 'careport',
-  component: CorporateActionComponent
-  
 }];
 
 @NgModule({

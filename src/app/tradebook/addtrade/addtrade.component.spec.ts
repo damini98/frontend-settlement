@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CorporateActionComponent } from './corporate-action.component';
+import { AddtradeComponent } from './addtrade.component';
 
-describe('CorporateActionComponent', () => {
-  let component: CorporateActionComponent;
-  let fixture: ComponentFixture<CorporateActionComponent>;
+describe('AddtradeComponent', () => {
+  let component: AddtradeComponent;
+  let fixture: ComponentFixture<AddtradeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CorporateActionComponent ]
+      declarations: [ AddtradeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CorporateActionComponent);
+    fixture = TestBed.createComponent(AddtradeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
