@@ -7,9 +7,8 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class TradebookService {
-
   constructor(private http:HttpClient){} 
   getTradebook():Observable<TradebookComponent[]> {
-    return this.http.get<TradebookComponent[]>("http://localhost:7000/tradebook/list")
+    return this.http.get<TradebookComponent[]>("http://localhost:8888/tradebook")
   }
 }

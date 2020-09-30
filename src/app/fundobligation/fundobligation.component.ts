@@ -14,12 +14,8 @@ export interface FundObligation {
 })
 export class FundobligationComponent implements OnInit {
   displayedColumns: string[] = ['clearingMemberName', 'fundObligationAmount'];
-  // dataSource = ELEMENT_DATA;
-
   public getData = [];
   constructor(private _httpService: FundserviceService) { }
-
-
   ngOnInit(): void {
     this._httpService.getFund().subscribe(data => this.getData = data);  
   }

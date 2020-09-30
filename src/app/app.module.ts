@@ -40,7 +40,7 @@ import { FundserviceService } from './fundobligation/fundservice.service';
     OverviewtableComponent,
     TradebookComponent,
     CmTradebookComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
