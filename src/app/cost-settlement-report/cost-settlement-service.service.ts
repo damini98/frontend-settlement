@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import {HttpClient} from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { CostSettlementReport } from './cost-settlement-report.component';
 import { Observable } from 'rxjs';
 
@@ -10,7 +10,8 @@ import { Observable } from 'rxjs';
 export class CostSettlementServiceService {
 
   constructor(private http: HttpClient) { }
-  getCostSettlement():Observable<CostSettlementReport[]>{
-           return this.http.get<CostSettlementReport[]>('http://localhost:7000/cost-settlement-report/list');
+  getCostSettlement(): Observable<CostSettlementReport[]> {
+    const params = new HttpParams().set('cmid', '1');
+    return this.http.get<CostSettlementReport[]>('http://localhost:8888/api/cm-cost-of-settlement?token=AARAOy1sO1dsUZIWjgj8');
   }
 }

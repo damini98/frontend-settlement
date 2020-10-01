@@ -11,6 +11,6 @@ export class TradebookService {
   getTradebook():Observable<TradebookComponent[]> {
     // const params = new HttpParams().set('cmid', '2');
     // return this.http.get<TradebookComponent[]>( "http://localhost:8888/cm-tradebook", {params});
-    return this.http.get<TradebookComponent[]>("http://localhost:8888/tradebook")
+    return this.http.get<TradebookComponent[]>("http://localhost:8888/api/tradebook?token=-5038cacb_174e3ceb81")
   }
 }

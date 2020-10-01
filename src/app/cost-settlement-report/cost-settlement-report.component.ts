@@ -18,9 +18,11 @@ export interface CostSettlementReport {
 export class CostSettlementReportComponent implements OnInit {
   displayedColumns: string[] = ['openingBalance', 'dailyObligation', 'costOfFunds', 'costOfSecurities','total'];
   public getData =[];
+  // public dataArr;
   constructor(private _httpService: CostSettlementServiceService) { }
 
   ngOnInit(): void {
     this._httpService.getCostSettlement().subscribe(data => this.getData =data);
+    // this.dataArr = new Array(this.getData);
   }
 }
