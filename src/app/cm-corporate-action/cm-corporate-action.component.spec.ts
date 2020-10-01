@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CorporateActionComponent } from './corporate-action.component';
+import { CmCorporateActionComponent } from './cm-corporate-action.component';
 
-describe('CorporateActionComponent', () => {
-  let component: CorporateActionComponent;
-  let fixture: ComponentFixture<CorporateActionComponent>;
+describe('CmCorporateActionComponent', () => {
+  let component: CmCorporateActionComponent;
+  let fixture: ComponentFixture<CmCorporateActionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CorporateActionComponent ]
+      declarations: [ CmCorporateActionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CorporateActionComponent);
+    fixture = TestBed.createComponent(CmCorporateActionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CorporateActionServiceService } from './corporate-action-service.service';
+import {CmCorporateActionServiceService} from './cm-corporate-action-service.service'
 
 export interface CorporateAction {
   stockName: string;
@@ -12,18 +12,18 @@ export interface CorporateAction {
 }
 
 @Component({
-  selector: 'app-corporate-action',
-  templateUrl: './corporate-action.component.html',
-  styleUrls: ['./corporate-action.component.css']
+  selector: 'app-cm-corporate-action',
+  templateUrl: './cm-corporate-action.component.html',
+  styleUrls: ['./cm-corporate-action.component.css']
 })
-export class CorporateActionComponent implements OnInit {
+export class CmCorporateActionComponent implements OnInit {
   displayedColumns: string[] = ['stockName', 'openingBalance','dailyObligation','netTotal','corporateAction','closingBalance'];
   public getData =[];//obs
   
-  constructor(private _httpService: CorporateActionServiceService) { }
+  constructor(private _httpService: CmCorporateActionServiceService) { }
 
   ngOnInit(): void {
     this._httpService.getCorporateAction().subscribe(data => this.getData =data);
   }
-}
 
+}
