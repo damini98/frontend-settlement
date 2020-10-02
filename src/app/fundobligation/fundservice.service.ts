@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { FundObligation } from './fundobligation.component';
 import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FundserviceService {
-  constructor(private http: HttpClient) { }
+  constructor(private cookieService: CookieService, private http: HttpClient) { }
   getFund(): Observable<FundObligation[]> {
-    return this.http.get<FundObligation[]>('http://localhost:8888/api/fund-obligation?token=-5038cacb_174e3ceb81');
+    const params = new HttpParams().set('token', this.cookieService.get("token"));
+    return this.http.get<FundObligation[]>('http://localhost:8888/api/fund-obligation', {params});
   }
 }

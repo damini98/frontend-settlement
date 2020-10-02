@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,14 +10,33 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  loginID = 1;
-  loggedIn: true;
+  public loggedIn;
+  public ch ;
+  public cm ;
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private cookieService: CookieService, private breakpointObserver: BreakpointObserver) { }
+  checkType(){
+    if (this.cookieService.get("type") == "clearing_house") {
+      console.log("houseeee")
+      this.loggedIn = true;
+      this.ch = true;
+    }
+    else if (this.cookieService.get("type") == "clearing_member") {
+      this.loggedIn = true;
+      this.cm = true;
+    }
+  }
+ 
+  deleteCookie() {
+    this.cookieService.delete("token");
+    this.cookieService.delete("type");
+  }
+
 
 }
