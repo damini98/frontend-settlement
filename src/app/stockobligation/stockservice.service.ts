@@ -13,5 +13,6 @@ export class StockserviceService {
   getStock():Observable<StockObligation[]>{
     const params = new HttpParams().set('token', this.cookieService.get("token"));
     return this.http.get<StockObligation[]>('http://localhost:8888/api/stock-obligation', {params});
+
   }
 }
