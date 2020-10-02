@@ -3,7 +3,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import {Observable} from 'rxjs';
 import { CmTradebookComponent } from './cm-tradebook.component';
 import { CookieService } from 'ngx-cookie-service'; 
-// import { GlobalData } from '../assets/data/global-data';
 
 @Injectable({
   providedIn: 'root'

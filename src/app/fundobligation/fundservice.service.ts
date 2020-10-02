@@ -9,6 +9,6 @@ import { Observable } from 'rxjs';
 export class FundserviceService {
   constructor(private http: HttpClient) { }
   getFund(): Observable<FundObligation[]> {
-    return this.http.get<FundObligation[]>('http://localhost:8888/fund-obligation');
+    return this.http.get<FundObligation[]>('http://localhost:8888/api/fund-obligation?token=-5038cacb_174e3ceb81');
   }
 }
