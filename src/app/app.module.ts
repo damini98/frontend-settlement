@@ -11,7 +11,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CostSettlementReportComponent } from './cost-settlement-report/cost-settlement-report.component';
-import { CorporateActionComponent } from './corporate-action/corporate-action.component';
 import { MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -29,14 +28,16 @@ import { HttpClientModule} from '@angular/common/http';
 import { CmObligationComponent } from './cm-obligation/cm-obligation.component';
 import { FundserviceService } from './fundobligation/fundservice.service';
 import { MatDialogModule } from '@angular/material/dialog'
-import { AddtradeComponent} from './tradebook/addtrade/addtrade.component'
+import { AddtradeComponent} from './tradebook/addtrade/addtrade.component';
+import { CmCorporateActionComponent } from './cm-corporate-action/cm-corporate-action.component'
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CostSettlementReportComponent,
-    CorporateActionComponent,
     StockobligationComponent,
     FundobligationComponent,
     OverviewtableComponent,
@@ -45,7 +46,8 @@ import { AddtradeComponent} from './tradebook/addtrade/addtrade.component'
     TradebookComponent,
     CmTradebookComponent,
     LoginComponent,
-    AddtradeComponent
+    AddtradeComponent,
+    CmCorporateActionComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,7 @@ import { AddtradeComponent} from './tradebook/addtrade/addtrade.component'
     MatInputModule,
     HttpClientModule,
     MatDialogModule,
+    
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

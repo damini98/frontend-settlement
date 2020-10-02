@@ -10,10 +10,10 @@ export class CmobligationService {
 
   constructor(private http: HttpClient) { }
   getCMStockObligation():Observable<cmStockObligation[]>{
-    return this.http.get<cmStockObligation[]>('http://localhost:7000/stocks');
+    return this.http.get<cmStockObligation[]>('http://localhost:8888/api/cm-stock-obligation?token=AARAOy1sO1dsUZIWjgj8');
   }
   getCMFundObligation():Observable<cmFundObligation[]>{
-    return this.http.get<cmFundObligation[]>('http://localhost:7001/cashrate');
+    return this.http.get<cmFundObligation[]>('http://localhost:8888/api/cm-fund-obligation?token=AARAOy1sO1dsUZIWjgj8');
   }
 
 }

@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CmTradebookComponent } from './cm-tradebook/cm-tradebook.component';
-import { CorporateActionComponent } from './corporate-action/corporate-action.component';
+import { CmCorporateActionComponent } from './cm-corporate-action/cm-corporate-action.component'
 import { CostSettlementReportComponent } from './cost-settlement-report/cost-settlement-report.component';
 import { FundobligationComponent } from './fundobligation/fundobligation.component';
 import { LoginComponent } from './login/login.component';
 import { OverviewtableComponent } from './overviewtable/overviewtable.component';
 import { StockobligationComponent } from './stockobligation/stockobligation.component';
 import { TradebookComponent } from './tradebook/tradebook.component';
+import { CmObligationComponent } from './cm-obligation/cm-obligation.component';
 
 const routes: Routes = [{
   path: '',
@@ -32,7 +33,13 @@ const routes: Routes = [{
   component: CostSettlementReportComponent
 }, {
   path: 'careport',
-  component: CorporateActionComponent
+  component: CmCorporateActionComponent
+}, {
+  path: 'cm-obligations',
+  component: CmObligationComponent
+}, {
+  path: 'csreport-after',
+  component: CmTradebookComponent
 }, {
   path: 'cm-tradebook',
   component: CmTradebookComponent

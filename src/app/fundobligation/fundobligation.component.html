@@ -1,15 +1,20 @@
-<h2 text-align="center">Fund Obligation Report</h2>
+<div class="flex-container">
+  <h2 text-align="center">Fund Obligation Report</h2>
 
-<mat-table class="mat-elevation-z8" [dataSource] = "getData">
+  <mat-table class="mat-elevation-z8" [dataSource]="getData">
     <ng-container matColumnDef="clearingMemberName">
       <mat-header-cell *matHeaderCellDef> CM </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{ element.clearingMemberName }} </mat-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.clearingMemberName }}
+      </mat-cell>
     </ng-container>
     <ng-container matColumnDef="fundObligationAmount">
       <mat-header-cell *matHeaderCellDef> Fund Obligation </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.fundObligationAmount}} </mat-cell>
+      <mat-cell *matCellDef="let element">
+        {{element.fundObligationAmount}}
+      </mat-cell>
     </ng-container>
-<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-
+</div>

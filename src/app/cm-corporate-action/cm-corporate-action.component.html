@@ -1,0 +1,43 @@
+<div class="flex-container">
+  <p text-align="center">Corporate Actions Report</p>
+  <mat-table [dataSource]="getData" class="mat-elevation-z8">
+    <ng-container matColumnDef="stockName">
+      <mat-header-cell *matHeaderCellDef>Name of Stock</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.stockName }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="openingBalance">
+      <mat-header-cell *matHeaderCellDef>Opening Balance</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.openingBalance }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="dailyObligation">
+      <mat-header-cell *matHeaderCellDef>Daily Obligation</mat-header-cell>
+      <mat-cell *matCellDef="let element"
+        >{{element.dailyObligation }}</mat-cell
+      >
+    </ng-container>
+
+    <ng-container matColumnDef="netTotal">
+      <mat-header-cell *matHeaderCellDef> Net Total </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.netTotal}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="corporateAction">
+      <mat-header-cell *matHeaderCellDef>Corporate Actions </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{element.corporateAction }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="closingBalance">
+      <mat-header-cell *matHeaderCellDef> Closing Balance</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{element.closingBalance }}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
