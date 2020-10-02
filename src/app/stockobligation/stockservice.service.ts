@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { StockObPostCA } from '../stockobpostca/stockobpostca.component';
+import { StockObligation } from './stockobligation.component';
 
 
 @Injectable({
@@ -10,7 +10,7 @@ import { StockObPostCA } from '../stockobpostca/stockobpostca.component';
 export class StockserviceService {
 
   constructor(private http: HttpClient) { }
-  getStock():Observable<StockObPostCA[]>{
-    return this.http.get<StockObPostCA[]>('');
+  getStock():Observable<StockObligation[]>{
+    return this.http.get<StockObligation[]>('');
   }
 }

@@ -7,7 +7,7 @@ export interface StockObPostCA{
   amazon: number;
   apple: number;
   netflix: number;
-  facebook: number;
+  facebook: number;}
 
 @Component({
   selector: 'app-stockobpostca',
