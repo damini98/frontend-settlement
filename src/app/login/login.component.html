@@ -50,7 +50,7 @@
             <mat-icon matSuffix>email</mat-icon>
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Password" type="password" required minlength="6" name="password" ngModel
+            <input matInput placeholder="Password" type="password" name="password" ngModel
               #password="ngModel" />
             <mat-error *ngIf="password.errors && password.errors.required">
               Password is required

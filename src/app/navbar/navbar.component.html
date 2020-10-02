@@ -7,37 +7,45 @@
     [mode]="(isHandset$ | async) ? 'side' : 'push'"
     [opened]="(isHandset$ | async) === true"
   >
-    <mat-toolbar color="indigo" >
+    <mat-toolbar color="indigo">
       <span> Menu </span>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="/overview" > Overview</a>
-      <a mat-list-item href="/tradebook">Tradebook</a>
-      <a mat-list-item href="/stockOb">Stock Obligation</a>
-      <a mat-list-item href="/fundOb">Fund Obligation</a>
+      <a *ngIf="ch" mat-list-item href="/overview"> Overview</a>
+      <a *ngIf="ch" mat-list-item href="/tradebook">Tradebook</a>
+      <a *ngIf="ch" mat-list-item href="/stockOb">Stock Obligation</a>
+      <a *ngIf="ch" mat-list-item href="/fundOb">Fund Obligation</a>
 
-      <a mat-list-item href="/cm-tradebook"> CM Tradebook</a>
-      <a mat-list-item href="/cm-obligations"> CM Obligations</a>
-      <a mat-list-item href="/csreport"> CM Cost Settlement Report</a>
-      <a mat-list-item href="/careport"> CM Corporate Actions Report</a>
-      <a mat-list-item href="/csreport-after"> CM Cost Settlement Report After CA</a>
+      <a *ngIf="cm" mat-list-item href="/cm-tradebook"> CM Tradebook</a>
+      <a *ngIf="cm" mat-list-item href="/cm-obligations"> CM Obligations</a>
+      <a *ngIf="cm" mat-list-item href="/csreport">
+        CM Cost Settlement Report</a
+      >
+      <a *ngIf="cm" mat-list-item href="/careport">
+        CM Corporate Actions Report</a
+      >
+      <a *ngIf="cm" mat-list-item href="/csreport-after">
+        CM Cost Settlement Report After CA</a
+      >
 
-      <a mat-list-item href="/login">Logout</a>
+      <a mat-list-item (click)="deleteCookie()" href="/login">Logout</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
+        (click)="checkType()"
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
         class="primary"
-        *ngIf="!loggedIn" class="disabled"
+        *ngIf="!loggedIn"
+        class="disabled"
       >
-        <mat-icon aria-label="Side nav toggle icon" >menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Clearing House</span>
+      <span>Clearing and Settlement</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
