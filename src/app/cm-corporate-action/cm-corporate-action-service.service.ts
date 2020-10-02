@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {CorporateAction} from './cm-corporate-action.component';
 import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service'; 
 
 
 @Injectable({
@@ -9,8 +10,12 @@ import { Observable } from 'rxjs';
 })
 export class CmCorporateActionServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private cookieService: CookieService,private http: HttpClient) { }
   getCorporateAction():Observable<CorporateAction[]>{
-    return this.http.get<CorporateAction[]>('http://localhost:4200/cm-corporate-action-report?cmid=1');
+    const params = new HttpParams().set('token', this.cookieService.get("token"));
+    return this.http.get<CorporateAction[]>( "http://localhost:8888/api/cm-corporate-action-report", {params});
   }
 }
+
+
+    

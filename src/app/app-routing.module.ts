@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { OverviewtableComponent } from './overviewtable/overviewtable.component';
 import { StockobligationComponent } from './stockobligation/stockobligation.component';
 import { TradebookComponent } from './tradebook/tradebook.component';
+import { CmObligationComponent } from './cm-obligation/cm-obligation.component';
 
 const routes: Routes = [{
   path: '',
@@ -33,6 +34,12 @@ const routes: Routes = [{
 }, {
   path: 'careport',
   component: CmCorporateActionComponent
+}, {
+  path: 'cm-obligations',
+  component: CmObligationComponent
+}, {
+  path: 'csreport-after',
+  component: CmTradebookComponent
 }, {
   path: 'cm-tradebook',
   component: CmTradebookComponent
