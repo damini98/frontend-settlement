@@ -1,14 +1,7 @@
-
 import { Component, OnInit } from '@angular/core';
-import {AfterViewInit, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
-import { OverviewtableService } from './overviewtable.service';
+import { CmoverviewService } from './cmoverview.service';
 
 
-/**
- * @title Table with pagination
- */
 export interface TradeVolumeCard{
   TradeVolume: number;
 }
@@ -32,15 +25,13 @@ export interface InterestRates{
  stock: string;
  borrowingcost: number;
 }
-
 @Component({
-  selector: 'app-overviewtable',
-  templateUrl: './overviewtable.component.html',
-  styleUrls: ['./overviewtable.component.css']
+  selector: 'app-cm-overview',
+  templateUrl: './cm-overview.component.html',
+  styleUrls: ['./cm-overview.component.css']
 })
-export class OverviewtableComponent implements OnInit{
+export class CmOverviewComponent implements OnInit {
 
-  // dataSourceOne: MatTableDataSource<OpeningBalance>;
   displayedColumnsOne: string[] = ['clearingMemberName','cash','apple','google','facebook','amazon','netflix' ];
 
 
@@ -57,13 +48,13 @@ export class OverviewtableComponent implements OnInit{
   public getCashRate=[]
   public getTradeVolume=[]
   public today= new Date()
-  constructor(private _httpService: OverviewtableService) { }
+  constructor(private _httpService: CmoverviewService) { }
   ngOnInit(): void {
     
     this._httpService.getOpeningBalance().subscribe(data => this.getBalance = data);
     this._httpService.getInterestRates().subscribe(data => this.getRates = data);
     this._httpService.getCashInterestRate().subscribe(data => this.getCashRate = data);
     this._httpService.getTradeVolume().subscribe(data => this.getTradeVolume = data);
-    
-  
-}}
+  }
+
+}

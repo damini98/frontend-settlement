@@ -6,8 +6,10 @@ export interface CorporateAction {
   openingBalance: number;
   dailyObligation: number;
   netTotal:number;
+  corporateActionName : string;
   corporateAction:number;
   closingBalance: number;
+  
 
 }
 
@@ -17,7 +19,7 @@ export interface CorporateAction {
   styleUrls: ['./cm-corporate-action.component.css']
 })
 export class CmCorporateActionComponent implements OnInit {
-  displayedColumns: string[] = ['stockName', 'openingBalance','dailyObligation','netTotal','corporateAction','closingBalance'];
+  displayedColumns: string[] = ['stockName', 'openingBalance','dailyObligation','netTotal','corporateActionName','corporateAction','closingBalance'];
   public getData =[];//obs
   
   constructor(private _httpService: CmCorporateActionServiceService) { }

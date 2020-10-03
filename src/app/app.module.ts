@@ -29,7 +29,8 @@ import { CmObligationComponent } from './cm-obligation/cm-obligation.component';
 import { FundserviceService } from './fundobligation/fundservice.service';
 import { MatDialogModule } from '@angular/material/dialog'
 import { AddtradeComponent} from './tradebook/addtrade/addtrade.component';
-import { CmCorporateActionComponent } from './cm-corporate-action/cm-corporate-action.component'
+import { CmCorporateActionComponent } from './cm-corporate-action/cm-corporate-action.component';
+import { CmOverviewComponent } from './cm-overview/cm-overview.component'
 
 
 
@@ -47,7 +48,8 @@ import { CmCorporateActionComponent } from './cm-corporate-action/cm-corporate-a
     CmTradebookComponent,
     LoginComponent,
     AddtradeComponent,
-    CmCorporateActionComponent
+    CmCorporateActionComponent,
+    CmOverviewComponent
   ],
   imports: [
     BrowserModule,

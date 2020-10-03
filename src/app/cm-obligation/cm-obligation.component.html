@@ -1,52 +1,55 @@
+<h2>Obligation Report</h2><br>
+<h3>Stock Obligation</h3>
 <div class="flex-container">
-  <mat-table [dataSource]="getStock" class="mat-elevation-z8">
+  
+  <table mat-table [dataSource]="getStock" class="mat-elevation-z8">
+    
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Clearing Member </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.name }} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Clearing Member </th >
+      <td mat-cell *matCellDef="let element"> {{element.name }} </td>
     </ng-container>
     <ng-container matColumnDef="google">
-      <mat-header-cell *matHeaderCellDef> Google </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.google }} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Google </th >
+      <td mat-cell *matCellDef="let element"> {{element.google }} </td>
     </ng-container>
     <ng-container matColumnDef="amazon">
-      <mat-header-cell *matHeaderCellDef> Amazon </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.amazon }} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Amazon </th >
+      <td mat-cell *matCellDef="let element"> {{element.amazon }} </td>
     </ng-container>
     <ng-container matColumnDef="apple">
-      <mat-header-cell *matHeaderCellDef> Apple </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.apple}} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Apple </th >
+      <td mat-cell *matCellDef="let element"> {{element.apple}} </td>
     </ng-container>
     <ng-container matColumnDef="netflix">
-      <mat-header-cell *matHeaderCellDef> Netflix </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.netflix }} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Netflix </th >
+      <td mat-cell *matCellDef="let element"> {{element.netflix }} </td>
     </ng-container>
     <ng-container matColumnDef="facebook">
-      <mat-header-cell *matHeaderCellDef> Facebook </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.facebook }} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Facebook </th >
+      <td mat-cell *matCellDef="let element"> {{element.facebook }} </td>
     </ng-container>
 
-    <mat-header-row
-      *matHeaderRowDef="displayedStockObligationColumns"
-    ></mat-header-row>
-    <mat-row
-      *matRowDef="let row; columns: displayedStockObligationColumns"
-    ></mat-row>
-  </mat-table>
+    <tr mat-header-row *matHeaderRowDef="displayedStockObligationColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedStockObligationColumns"></tr>
+  </table>
+</div>
+
+<div class="flex-container">
+
   <mat-card width="3cm">
-    <mat-table [dataSource]="getFund" class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="getFund" class="mat-elevation-z8">
       <ng-container matColumnDef="fund">
-        <mat-header-cell *matHeaderCellDef text-align="center">
+        <th mat-header-cell *matHeaderCellDef text-align="center">
           FundOblgation
-        </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.fund }} </mat-cell>
+        </th >
+        <td mat-cell *matCellDef="let element"> {{element.fund }} <td>
       </ng-container>
 
-      <mat-header-row
-        *matHeaderRowDef="displayedFundObligationColumns"
-      ></mat-header-row>
-      <mat-row
-        *matRowDef="let row; columns: displayedFundObligationColumns"
-      ></mat-row>
-    </mat-table>
+      <tr mat-header-row *matHeaderRowDef="displayedFundObligationColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedFundObligationColumns"></tr>
+    </table>
+
   </mat-card>
+
 </div>
